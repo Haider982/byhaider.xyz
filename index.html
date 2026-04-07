@@ -12,6 +12,11 @@
         text-align: center;
     }
 
+    .light {
+        background-color: white;
+        color: black;
+    }
+
     .dark {
         background-color: #141313;
         color: white;
@@ -46,7 +51,14 @@
 <script>
     function darkMode() {
     document.getElementById("body").setAttribute("class", "dark");
-    document.getElementById("darkModeButton").setAttribute("class", "invis");
+    document.getElementById("darkModeButton").innerHTML = "Turn on light mode";
+    document.getElementById("darkModeButton").setAttribute("onclick", "lightMode()");
+    }
+
+    function lightMode() {
+    document.getElementById("body").setAttribute("class", "light");
+    document.getElementById("darkModeButton").innerHTML = "Turn on dark mode";
+    document.getElementById("darkModeButton").setAttribute("onclick", "darkMode()");
     }
 </script>
 
