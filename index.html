@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="darkMode.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>byhaider.xyz Index</title>
@@ -11,11 +11,29 @@
     h1 {
         text-align: center;
     }
+
+    .dark {
+        background-color: #141313;
+        color: white;
+    }
+
+    .button {
+        background-color: rgb(138, 193, 255);
+        color:black;
+        border: none;
+        padding: 10px 10px;
+    }
+
+    .invis {
+        display:none;
+    }
 </style>
 
-<body>
+<body id="body">
     <h1>Sites made by Haider</h1>
     <p>This is a list of sites I have created. It will be updated periodically. Here is when it was last updated: <br>06/04/2026</p>
+    <br>
+    <button class="button" onclick="darkMode()" id="darkModeButton">Turn on dark mode</button>
     <h2>List:</h2>
     <p>None yet!</p>
     <!--
@@ -24,4 +42,13 @@
     </ul>
     -->
 </body>
+
+<script>
+    function darkMode() {
+    document.getElementById("body").setAttribute("class", "dark");
+    document.getElementById("darkModeButton").setAttribute("class", "invis");
+    }
+</script>
+
+
 </html>
